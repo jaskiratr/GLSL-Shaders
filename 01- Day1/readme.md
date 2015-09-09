@@ -1,6 +1,6 @@
-Classwork:
-	Basic shaders
-	Uniforms
+## Classwork:
+	- Basic shaders
+	- Uniforms
 
-Homework:
-	Implemented in threejs
+## Homework:
+	- Implemented in threejs
