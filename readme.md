@@ -1,3 +1,3 @@
-## Shaders Class
-# Fall 2015
+# Shaders Class
+## Fall 2015
 
