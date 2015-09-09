@@ -1,0 +1,17 @@
+// Uniforms defined in : https://github.com/patriciogonzalezvivo/glslCanvas
+//Environment : http://patriciogonzalezvivo.com/2015/thebookofshaders/edit.html#02/hello_world.frag
+
+#ifdef GL_ES
+precision mediump float;
+#endif
+
+uniform float u_time;
+uniform vec2 u_resolution; 
+
+void main() {
+    vec2 pos = gl_FragCoord.xy/u_resolution;
+	gl_FragColor = vec4(1.0);
+//     gl_FragColor = vec4(pos.x,pos.y,0,1.0);
+    gl_FragColor.rg = pos.xy;
+    gl_FragColor.b = abs(sin(u_time));
+}
