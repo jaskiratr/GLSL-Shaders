@@ -1,0 +1,28 @@
+#ifdef GL_ES
+precision mediump float;		// Set float precision to medium 
+#endif
+
+void main(){
+	
+	highp float a; 
+}
+
+vec3, vec4 are floats.
+
+ivec3 - int vector
+bvec3 - boolean vector
+
+
+--------
+http://patriciogonzalezvivo.com/2015/thebookofshaders//function.html
+
+y = smoothstep(0.2 ,0.,x);
+y = step(0.2 ,0.,x);
+y = smooth(0.2 ,0.,x);
+
+----
+Pulse Function
+
+float function(in float x) {
+    return smoothstep(0.1,0.5,x) - smoothstep(0.5,1.,x);
+}
