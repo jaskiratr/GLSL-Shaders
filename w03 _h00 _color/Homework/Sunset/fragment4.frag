@@ -34,7 +34,7 @@ void main() {
     float sunHaloExp = 2.*exp(-pow(halo,2.0)/(pow(1.25-y1,15.2)));
     sunHaloExp += 2.*exp(-pow(halo,2.0)/(pow(0.004,1.2)));
 
-    vec3 haloRed = vec3 (.4,0.2,0.1) * sunHaloExp*3.;
+    vec3 haloRed = vec3 (.4,0.2,0.1) * sunHaloExp*3.*(2.-y1);
     
     vec3 horizon_blue = pow((st.y-1.5),15.)*vec3(0.2,0.5,1.0);
     vec3 horizon_orange = pow((st.y-1.5),35.)*vec3(1.,0.4,0.1);
