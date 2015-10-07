@@ -20,7 +20,7 @@ void main() {
     vec3 a = vec3(0.5, 0.5, 0.5);
     vec3 b = vec3(0.5, 0.5, 0.5);
     vec3 c = vec3(1.0, 1.0, 1.0);
-    vec3 d = vec3(0.0, 0.33, 0.66);
+    vec3 d = vec3(0., 0.33, 0.66);
     color = palette(st.x,a,b,c,d);
     gl_FragColor = vec4(color,1.0);
 }
