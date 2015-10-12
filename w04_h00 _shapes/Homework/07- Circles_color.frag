@@ -30,9 +30,9 @@ void main(){
     vec3 color2 = vec3(.9,.4,.4);
     vec3 color3 = vec3(.5,.8,.9);
 
-    vec3 c1 = circle( .5,.5,.1,color1);
-    c1 += circle( .2,.5,.1,color2);
-    c1 += circle( .5,.4,.1,color3);
+    vec3 c1 = circle( .45,.5,.1,color1);
+    c1 += circle( .55,.5,.1,color2);
+    c1 += circle( .5,.41,.1,color3);
     
     // c1 += circle( sin(u_time)/2.+.5, cos(u_time)/2.+.5,1.1);
     // c1 += circle( sin(u_time+5.)/2.+.5, cos(u_time+5.)/2.+.5,1.1);

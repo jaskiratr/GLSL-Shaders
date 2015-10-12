@@ -26,7 +26,7 @@ void main(){
     vec3 color = vec3(0.0);   
     float c1 = circle( .5,.5,1.1);
     c1 += circle( sin(u_time)/2.+.5, cos(u_time)/2.+.5,1.1);
-    c1 += circle( sin(u_time+5.)/2.+.5, cos(u_time+5.)/2.+.5,1.1);
+    c1 += circle( sin(-u_time+5.)/2.+.5, cos(-u_time+5.)/2.+.5,1.1);
     
 
     color = vec3(c1);

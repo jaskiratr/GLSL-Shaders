@@ -1,7 +1,7 @@
 ## Classwork:
-	- Colors
+	- Shapes
 
 ## Homework:
-	- Sunset/Sunrise + Turner Palette
-	- Experiments with Gradients and Shaping functions
+	- Creating your own functions for shapes
+	- Distance Fields
 	
