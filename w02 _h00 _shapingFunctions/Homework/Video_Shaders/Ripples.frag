@@ -33,4 +33,5 @@ void main (void)
                 - smoothstep(circle_radius-border, circle_radius, dist);
  
 	gl_FragColor = mix(circle_color, bkg_color,t);
+	
 }
