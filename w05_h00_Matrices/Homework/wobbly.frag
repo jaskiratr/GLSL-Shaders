@@ -20,8 +20,8 @@ void main(){
    
   // d = length( min(abs(st)-.3,0.) );
   // d = length( max(abs(st)-.3,0.) );
-  d += .1 * sin(4. * st.x + 0.5 * u_time );
-  d += .1 * cos(4. * st.y + 0.6 * u_time );
+  d += .1 * sin(4. * st.x + 0.2 * u_time );
+  d += .1 * cos(4. * st.y + .25 * u_time );
   // Visualize the distance field
   gl_FragColor = vec4(vec3(fract(d*25.0))*vec3(9.,1.7,.9),1.0);
 
