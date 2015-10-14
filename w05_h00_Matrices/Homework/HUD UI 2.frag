@@ -1,5 +1,3 @@
-// Author @patriciogv - 2015
-// http://patriciogonzalezvivo.com
 
 #ifdef GL_ES
 precision mediump float;
@@ -84,7 +82,9 @@ void main(){
     
     for(float i=0.; i<10.; i++){
       pos = vec3(st,i*.4); 
-      pos = matrix * pos;
+      pos = matrix * fract(pos*sin(u_time/2.));
+
+      
       color += box(pos.xy,vec2(0.04))*vec3(1.,0.4,0.1); 
       // color += box(pos.xy,vec2(0.04))*vec3(1.,0.4,0.1); 
     }
