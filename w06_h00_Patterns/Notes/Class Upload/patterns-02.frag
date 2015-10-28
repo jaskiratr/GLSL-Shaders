@@ -1,4 +1,3 @@
-
 #ifdef GL_ES
 precision mediump float;
 #endif
@@ -39,28 +38,21 @@ vec2 truchet(vec2 st){
     return st;
 }
 
-mat2 rotationMatrix(float a) {
-    return mat2(vec2(cos(a),-sin(a)),
-                vec2(sin(a),cos(a)));
-}
-
 void main() {
     vec2 st = gl_FragCoord.xy/u_resolution;
     vec3 color = vec3(0.);
     
-    float d = distance(st,vec2(.5));
-    d = sin(d*3.14*5.-u_time*3.);
-//     color += d;
+//     st *= 10.;
     
-    st *= 30.;
-    vec2 st_i = floor(st);
-    if (mod(st_i.y,2.) == 1.) {
-        st.x += .5;
-    }
+//     st = truchet(st*6.);
+//     st = truchet(st*3.);
+    st = truchet(st*3.);
+    st = brick(st);
+    st = truchet(st*1.);
+    st = truchet(st*2.);
+    
     vec2 st_f = fract(st);
-    st_f -= .5;
-    st_f = rotationMatrix(d*3.14)*st_f;
-    st_f += .5;
+    
     float pct = stripes(st_f);
     color += pct;
     
