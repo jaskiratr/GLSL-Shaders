@@ -12,14 +12,14 @@ float random(in float x){
     return fract(sin(x)*43758.5453);
 }
 
-float text(vec2 st, float pos){
-    st*= 4.;
+float text(float pos){
+    vec2 st =vec2(2.,1.);
     vec2 i_st = floor(st);
-
+    st*=4.;
     // i_st*=4.;
-    i_st.y+= pos;
+    // i_st.y+= pos;
     // i_st.y*=4.;
-    float color = (random(i_st)); 
+    float color = (pos); 
     // color+=1.;
 
     // color = step(0.5,color)*1000.;
@@ -30,13 +30,13 @@ void main() {
 
     vec2 st = gl_FragCoord.xy/u_resolution;
     
-    st*=100.0;
+    st*=10.0;
     vec2 i_st = floor(st);  // get the integer coords
     
-    i_st.y+=floor(u_time*random(i_st.x)*40.);
+    i_st.y+=floor(u_time*random(i_st.x)*20.);
     vec3 color = vec3(random(i_st));
     // i_st.y+=floor(u_time*random(i_st.x)*20.);
-    color*= text(st,random(i_st));
+    color*= text(random(i_st));
 
     // vec3 color = vec3(text(st)*i_st.y);
 
