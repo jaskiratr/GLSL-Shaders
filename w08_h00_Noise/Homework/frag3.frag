@@ -44,7 +44,9 @@ void main()
 		st.y+=u_time;
 		st.x+=u_time/2.;
         mat2 m = mat2( 1.6,  1.2, -1.3,  1.6 );
-		f  = 0.4000*noise(st);
+		// f  = 1.1000*noise(st);
+		// st = m*st;
+		f  = 1.4000*noise(st);
 		st = m*st;
 		// m = mat2( 1.6,  8., -3.102,  1.6 );
 		f += 0.200*noise(st);

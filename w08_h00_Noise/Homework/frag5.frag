@@ -63,16 +63,16 @@ void main() {
 
     float f = fbm(st+r);
 
-    color = mix(vec3(1.101961,1.919608,5.666667),
-                vec3(4.666667,1.66667,1.498039),
+    color = mix(vec3(3.101961,1.919608,7.666667),
+                vec3(3.666667,1.66667,1.498039),
                 clamp((f*f)*3.0,.4,1.1));
 
     color = mix(color,
-                vec3(1.6,.2,.5),
+                vec3(1.6,.0,.7),
                 clamp(length(q),.0,1.0));
 
     color = mix(color,
-                vec3(0.6,1.,1.),
+                vec3(1.,1.,1.1),
                 clamp(length(r.x),0.0,1.0));
 
     gl_FragColor = vec4((f*f*f+.6*f*f+.5*f)*color,1.);

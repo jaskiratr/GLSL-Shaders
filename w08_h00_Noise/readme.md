@@ -1,6 +1,6 @@
 ## Classwork:
-	- Randon
+	- Types of Noise
 
 ## Homework:
-	- Random Patterns
-	- Matrix Glyphs
+	- Noise + Gradients
+	
