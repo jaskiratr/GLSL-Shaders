@@ -38,6 +38,7 @@ void main () {
     st*=2.;
     vec2 st_f = fract(st);
     vec2 st_i = floor(st);
+    st.y*=1.4;
 
     //  if (mod(st_i.y,2.) == 1.) {
     //     st.x -= .5*sin(u_time);
@@ -46,7 +47,7 @@ void main () {
     //     st.y -= .5*cos(u_time);
     // }
 
-    float scale = 2.15;
+    float scale = 3.15;
     float offset = .4;
     
     float angle = noise(st)*2.5;
@@ -58,7 +59,7 @@ void main () {
     st += radius * vec2(cos(angle),sin(angle));
     vec4 color = vec4(0.0);
     color = texture2D(u_tex0,st);
-    color.r += texture2D(u_tex0,st).r/2.;
+    color.r += texture2D(u_tex0,st).r/4.;
     // color.r += texture2D(u_tex0,st/1.2).r;
     // color.g += texture2D(u_tex0,st/2.2).r;
     // color.b += texture2D(u_tex0,st/3.2).r;

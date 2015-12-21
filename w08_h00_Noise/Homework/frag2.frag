@@ -57,8 +57,11 @@ void main()
 	f = 0.5 + 0.5*f;
 	
    // f *= smoothstep( 0.0, 0.05, abs(p.x-0.6) );	
-	vec3 color = vec3(f)+pow((fog.y+.2),1.)*vec3(1.,0.4,0.1);
-	color+= fog.y*.5;
+	vec3 color = vec3(f)+pow((fog.y+.1),4.)*32.*vec3(1.,0.4,0.1);
+	// vec3 color = vec3(f)+pow((fog.y+.1),1.1)*vec3(1.,0.4,0.1);
+
+
+	color+= fog.y*.27;
 
 	
 	vec3 horizon_blue = pow((-fog.y+1.5),1.)*vec3(0.2,0.5,1.0);

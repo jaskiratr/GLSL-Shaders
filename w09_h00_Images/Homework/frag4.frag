@@ -16,7 +16,7 @@ void main () {
 
     float d = distance(st, vec2(0.5));
     d = smoothstep(0.,1.,sin(d*3.14*4.-u_time*5.));
-    color.g *= texture2D(u_tex0,vec2(0.,0.)).g;
+    // color.g *= texture2D(u_tex0,vec2(0.,0.)).g;
     color.r *= texture2D(u_tex0,vec2(d,d*2.)).r;
     color.g *= texture2D(u_tex0,vec2(0.,0.)).g;
     color.b *= texture2D(u_tex0,vec2(0.,0.)).b;

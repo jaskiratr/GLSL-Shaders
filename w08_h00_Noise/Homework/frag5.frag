@@ -67,9 +67,9 @@ void main() {
                 vec3(3.666667,1.66667,1.498039),
                 clamp((f*f)*3.0,.4,1.1));
 
-    color = mix(color,
-                vec3(1.6,.0,.7),
-                clamp(length(q),.0,1.0));
+    // color = mix(color,
+    //             vec3(1.6,.0,.7),
+    //             clamp(length(q),.0,1.0));
 
     color = mix(color,
                 vec3(1.,1.,1.1),
